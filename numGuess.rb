@@ -2,7 +2,7 @@
 
 def numberGuesser
   # Generate a random number between 1 and 100
-  secret_number = rand(1..100)
+  secretNumber = rand(1..100)
   attempts = 0
   guessed = false
 
@@ -14,12 +14,12 @@ def numberGuesser
     guess = gets.chomp.to_i
     attempts += 1
 
-    if guess < secret_number
+    if guess < secretNumber
       puts "Too low! Try again."
-    elsif guess > secret_number
+    elsif guess > secretNumber
       puts "Too high! Try again."
     else
-      puts "Congratulations! You've guessed the number #{secret_number} in #{attempts} attempts."
+      puts "Congratulations! You've guessed the number #{secretNumber} in #{attempts} attempts."
       guessed = true
     end
   end
